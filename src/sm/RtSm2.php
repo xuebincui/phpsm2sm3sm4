@@ -111,7 +111,7 @@ class RtSm2
      * @param string $publicKey 如提供的base64的，可使用 bin2hex(base64_decode($publicKey))
      * @return string
      */
-    public function doEncrypt($document, $publicKey, $model = C1C3C2)
+    public function doEncrypt($document, $publicKey, $model = C1C3C2, $head = "")
     {
         $adapter = $this->adapter;
         $generator = $this->generator;
@@ -136,9 +136,9 @@ class RtSm2
         $c3 = strtolower(Hex2ByteBuf::ByteArrayToHexString($this->cipher->Dofinal()));
         // print_r($c1.$c3.$c2);
         if ($model == C1C3C2) {
-            return $c1 . $c3 . $c2;
+            return $head . $c1 . $c3 . $c2;
         } else {
-            return $c1 . $c2 . $c3;
+            return $head . $c1 . $c2 . $c3;
         }
     }
     /**

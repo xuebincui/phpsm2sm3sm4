@@ -8,7 +8,7 @@ class SM3Digest extends  GeneralDigest
 {
     public static $AlgorithmName="SM3";
 
-    private const DIGEST_LENGTH = 32;
+    const DIGEST_LENGTH = 32;
 
     public function  GetDigestSize():int
     {

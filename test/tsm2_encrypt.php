@@ -32,9 +32,7 @@ echo "\n------------------以下是使用 c1c2c3 串可对比上面生成-------
 
 $document = "我爱你ILOVEYOU!";
 echo "\n原始: $document";
-$m2EncryptData = $sm2 ->doEncrypt($document, $publicKey,C1C2C3);
+$m2EncryptData = $sm2 ->doEncrypt($document, $publicKey,C1C2C3, '04');
 echo ("\n加密后: ".$m2EncryptData);
 $m2DecryptData = $sm2->doDecrypt($m2EncryptData,$privateKey,1,C1C2C3);
 echo ("\n解密后: ".$m2DecryptData);
-
-

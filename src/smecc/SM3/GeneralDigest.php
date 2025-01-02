@@ -4,7 +4,7 @@ namespace Rtgm\smecc\SM3;
 
 class GeneralDigest 
 {
-    private const  BYTE_LENGTH = 64;
+    const  BYTE_LENGTH = 64;
 
     private $xBuf=array();
     private $xBufOff;
